@@ -1,0 +1,32 @@
+.container {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 1100px) {
+  .container {
+    padding: 0 80px;
+    width: 1100px;
+  }
+}
+
+.container {
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.spin {
+  animation: spiner 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+img{ 
+  transform-origin:50% 50%;
+  animation:2s spiner  linear; 
+}
+
+@keyframes spiner {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(720deg); }
+}
+
